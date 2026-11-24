@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #F5F6FA;
+    --card-main: #FFFFFF;
+    --text-main: #202435;
+    --text-muted: #858B9B;
+    --border-main: #E9EAF0;
+    --accent-primary: #7167E8;
+    --accent-secondary: #8E83F5;
+  }
+
+  .dark {
+    --bg-main: #0F111A;
+    --card-main: #181A26;
+    --text-main: #F0F2F9;
+    --text-muted: #9CA3AF;
+    --border-main: #2A2D40;
+    --accent-primary: #8E83F5;
+    --accent-secondary: #7167E8;
+  }
+
+  body {
+    @apply bg-hub-bg text-hub-text font-sans antialiased transition-colors duration-200 dark:bg-hub-bg-dark dark:text-hub-text-dark min-h-screen selection:bg-hub-primary/20 selection:text-hub-primary;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-600;
+}
+
+/* Subtle transitions for cards and buttons */
+.hub-card {
+  @apply bg-white dark:bg-hub-card-dark rounded-hub border border-hub-border dark:border-hub-border-dark shadow-hub transition-all duration-200;
+}
+
+.hub-card-hover {
+  @apply hover:shadow-hub-lg hover:border-hub-primary/30 transition-all duration-200;
+}
+
+.hub-input {
+  @apply w-full px-4 py-2.5 rounded-hub-sm bg-hub-bg dark:bg-hub-card-subtle-dark border border-hub-border dark:border-hub-border-dark text-hub-text dark:text-hub-text-dark placeholder:text-hub-muted focus:outline-none focus:ring-2 focus:ring-hub-primary/30 focus:border-hub-primary transition-all text-sm;
+}
+
+.hub-button-primary {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-hub-sm bg-hub-primary hover:bg-hub-secondary text-white font-medium text-sm transition-all shadow-sm active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.hub-button-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-hub-sm bg-white dark:bg-hub-card-dark hover:bg-gray-50 dark:hover:bg-hub-card-subtle-dark border border-hub-border dark:border-hub-border-dark text-hub-text dark:text-hub-text-dark font-medium text-sm transition-all shadow-hub-sm active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+}
