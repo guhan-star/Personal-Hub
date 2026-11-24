@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PersonalHub" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#7167E8</item>
+        <item name="android:windowBackground">#F5F6FA</item>
+    </style>
+
+    <style name="Theme.PersonalHub.TransparentDialog" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+</resources>

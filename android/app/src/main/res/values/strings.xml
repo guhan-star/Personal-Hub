@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PersonalHub</string>
+    <string name="save_to_personalhub">Save to PersonalHub</string>
+    <string name="media_vault">Media Vault</string>
+    <string name="product_vault">Product Vault</string>
+    <string name="spendwise">SpendWise</string>
+    <string name="saving_content">Saving to PersonalHub...</string>
+    <string name="content_saved">Saved successfully</string>
+</resources>
